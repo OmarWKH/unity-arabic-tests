@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: deaaf217799b29b4eb0a896bf38be790
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Noto Kufi Arabic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 19f15135faf814e4a9b6c8802265a8a7, type: 3}
+  - {fileID: 12800000, guid: e24408fa43f5b424c88abf52f45b6d68, type: 3}
+  - {fileID: 12800000, guid: 1bb1c6913deaba541bce3c4aebfead27, type: 3}
+  - {fileID: 12800000, guid: 0303a6e0b594e3b4d8872ddcd7107f5e, type: 3}
+  - {fileID: 12800000, guid: 6cdfdc51ad1de9349a2926084cf9b623, type: 3}
+  - {fileID: 12800000, guid: e300be9f859d9a141bb876444afc7d2c, type: 3}
+  - {fileID: 12800000, guid: 3df67ecbff8159b40b1bff789cedec17, type: 3}
+  - {fileID: 12800000, guid: 1cdf8fc104ba5794596e22491b96fd86, type: 3}
+  - {fileID: 12800000, guid: 74a24d37d64c5654eb671a20e748e721, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

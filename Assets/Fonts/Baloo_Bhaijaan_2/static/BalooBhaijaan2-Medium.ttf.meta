@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c4e9a2c9318b63340b784f1c0559aa72
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Baloo Bhaijaan 2
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d3c775e05720c4f4082641d347a0abea, type: 3}
+  - {fileID: 12800000, guid: 64afe1c7928a7dd4a97c874b895498a5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
