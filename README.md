@@ -1,0 +1,4 @@
+- Unity 2022.3.2f1
+- TextMeshPro 3.2.0-pre.4
+- RTLTMPro 3.4.5
+- Arabic Writer 1.1
