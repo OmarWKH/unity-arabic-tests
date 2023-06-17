@@ -49,25 +49,40 @@ public class DebugText : MonoBehaviour
     public string DisplayCharInfo(string text, TMP_FontAsset fontAsset) {
         string result = "";
         foreach (var c in text) {
-            result += $"[{c} ({System.Text.Encoding.Unicode.GetBytes(c.ToString()).Select(b => $"{b:X}").Reverse().Aggregate((a, b) => $"{a}{b}")})/{ConvertCharToGlyphID(c, fontAsset)}] ";
+            result += $"[{c} ({ConvertCharToHex(c)})/{ConvertCharToGlyphID(c, fontAsset)}] ";
         }
         return result;
+    }
+
+    public string ConvertCharToHex(char c) {
+        return System.Text.Encoding.Unicode.GetBytes(c.ToString()).Select(b => $"{b:X}").Reverse().Aggregate((a, b) => $"{a}{b}");
     }
 
     public int ConvertCharToRTLTMProGlyphID(char c) {
         return GlyphTable.Convert(c);
     }
 
-    public uint ConvertCharToGlyphID(char c, TMP_FontAsset fontAsset) {
+    public uint? ConvertCharToGlyphID(char c, TMP_FontAsset fontAsset) {
         fontAsset.characterLookupTable.TryGetValue(c, out var glyphIndex);
-        return glyphIndex.glyphIndex;
+        if (glyphIndex != null) {
+            return glyphIndex.glyphIndex;
+        }
+        return null;
     }
 
-    public string ColorEachCharacterByItsInt(string text) {
-        string result = "";
-        foreach (var c in text) {
-            result += $"<color=#{(int)c:X}>{c}</color>";
+    [UnityEngine.ContextMenu(nameof(ColorizeAllFields))]
+    public void ColorizeAllFields() {
+        foreach (var field in fields) {
+            ColorEachCharacterByItsInt(field);
         }
-        return result;
+    }
+
+    public void ColorEachCharacterByItsInt(TextMeshProUGUI field) {
+        string result = "";
+        foreach (var c in field.text) {
+            result += $"<color=#{ConvertCharToHex(c)}>{c}</color>";
+        }
+        UnityEditor.Undo.RecordObject(field, "Color each character by its int");
+        field.text = result;
     }
 }
